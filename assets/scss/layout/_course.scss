@@ -158,5 +158,112 @@
       transform: translateY(-2rem);
     }
   }
+
+  &_cards {
+    .section_title {
+      margin-bottom: 42rem;
+
+      @include media('md') {
+        margin-bottom: 24rem;
+      }
+    }
+
+    &_in {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 12rem;
+
+      @include media('md') {
+        grid-template-columns: repeat(1,1fr);
+        gap: 15rem;
+      }
+    }
+
+    .course_card {
+      padding: 20rem;
+      box-shadow: 0px 0px 5px 0px #A7A7A7;
+      border-radius: 16rem;
+      display: flex;
+      align-items: center;
+      gap: 16rem;
+
+      img {
+        width: 74rem;
+        height: 74rem;
+        display: flex;
+        flex-shrink: 0;
+      }
+
+      p {
+        font-weight: 600;
+        font-size: 16rem;
+        line-height: 150%;
+        color: $color-black;
+      }
+    }
+
+    .online_courses {
+      padding: 40rem 0;
+      display: flex;
+      justify-content: center;
+      gap: 24rem;
+
+      @include media('md') {
+        flex-direction: column;
+      }
+
+      .online_course {
+        width: 350rem;
+        padding: 30rem 20rem;
+
+        @include media('md') {
+          width: 100%;
+          padding: 0 20rem;
+        }
+
+        &.one {
+          padding: 30rem 20rem;
+          box-shadow: 0px 0px 5px 0px #949494;
+          border-radius: 16rem;
+
+          @include media('md') {
+            padding: 20rem 10rem;
+          }
+        }
+
+        h3 {
+          font-weight: 900;
+          font-size: 20rem;
+          line-height: 171%;
+          color: $color-black;
+          margin-bottom: 20rem;
+        }
+
+        ul {
+          display: flex;
+          flex-direction: column;
+          gap: 15rem;
+
+          li {
+            display: flex;
+            align-items: center;
+            gap: 12rem;
+          }
+
+          img {
+            width: 22rem;
+            height: 22rem;
+          }
+
+          span {
+            font-weight: 400;
+            font-size: 16rem;
+            line-height: 175%;
+            color: $color-black;
+          }
+        }
+      }
+    }
+  }
 }
 // course
