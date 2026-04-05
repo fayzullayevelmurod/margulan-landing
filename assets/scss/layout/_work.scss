@@ -1,0 +1,64 @@
+// work
+.work {
+  .section_title {
+    margin-bottom: 42rem;
+
+    @include media('md') {
+      margin-bottom: 24rem;
+    }
+  }
+
+  &_in {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 30rem;
+
+    @include media('md') {
+      gap: 20rem;
+      grid-template-columns: repeat(2,1fr);
+    }
+
+    @include media('sm') {
+      grid-template-columns: repeat(1,1fr);
+    }
+  }
+
+  &_block {
+    border-radius: 16rem;
+    box-shadow: 0px 0px 10px 0px #B4B4B4;
+    overflow: hidden;
+
+    @include media('sm') {
+      max-width: 270rem;
+      margin: auto;
+    }
+
+    img {
+      height: 210rem;
+    }
+
+    &-text {
+      padding: 0 20rem 20rem 20rem;
+
+      @include media('md') {
+        padding: 0 15rem 15rem 15rem;
+      }
+    }
+
+    h3 {
+      font-weight: 700;
+      font-size: 18rem;
+      line-height: 130%;
+      color: $color-black;
+      margin-bottom: 16rem;
+    }
+
+    p {
+      font-weight: 400;
+      font-size: 16rem;
+      line-height: 175%;
+      color: $color-black;
+    }
+  }
+}
+// work
