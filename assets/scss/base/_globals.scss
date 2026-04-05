@@ -112,9 +112,9 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .container {
-  max-width: calc(1200rem + 30rem);
+  max-width: calc(1200rem + 40rem);
   margin: 0 auto;
-  padding: 0 15rem;
+  padding: 0 20rem;
 }
 
 .section_title {
@@ -125,16 +125,24 @@ p, h1, h2, h3, h4, h5, h6 {
   color: $color-black;
   text-transform: uppercase;
 
+  .yellow {
+    color: $color-yellow;
+
+    @include media('md') {
+      display: block;
+    }
+  }
+
   @include media('md') {
     font-size: 26rem;
   }
 }
 
-.section-top {
-  margin-top: 80rem;
+.section-box {
+  padding: 55rem 0;
 
   @include media('md') {
-    margin-top: 40rem;
+    padding: 25rem 0;
   }
 }
 
