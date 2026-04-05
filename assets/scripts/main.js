@@ -109,24 +109,16 @@ window.addEventListener("click", (event) => {
   });
 });
 
-let platformSwiper;
+// faq
+document.querySelectorAll(".faq_header").forEach((header) => {
+  header.addEventListener("click", () => {
+    const item = header.parentElement;
 
-function initPlatformSwiper() {
-  const isMobile = window.innerWidth <= 850;
-
-  if (isMobile && !platformSwiper) {
-    platformSwiper = new Swiper(".platform_in", {
-      slidesPerView: 1.2,
-      spaceBetween: 20,
-      centeredSlides: false,
+    document.querySelectorAll(".faq_item").forEach((el) => {
+      if (el !== item) el.classList.remove("active");
     });
-  }
 
-  if (!isMobile && platformSwiper) {
-    platformSwiper.destroy(true, true);
-    platformSwiper = null;
-  }
-}
-
-initPlatformSwiper();
-window.addEventListener("resize", initPlatformSwiper);
+    item.classList.toggle("active");
+  });
+});
+// faq
