@@ -1,0 +1,36 @@
+.header {
+  padding-top: 20rem;
+  position: absolute;
+  left: 0;
+  width: 100%;
+
+  .logo {
+    position: relative;
+    width: 220rem;
+    height: 75rem;
+    z-index: 2;
+
+    @include media('md') {
+      width: 145rem;
+      height: 47rem;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: -40rem;
+      top: -20rem;
+      width: 300rem;
+      height: 120rem;
+      border-radius: 3000rem;
+      background: $color-white;
+      filter: blur(25rem);
+      z-index: -1;
+
+      @include media('md') {
+        width: 240rem;
+        height: 80rem;
+      }
+    }
+  }
+}

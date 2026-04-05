@@ -1,0 +1,279 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
+
+img {
+  max-width: 100%;
+}
+
+span, label {
+  display: inline-block;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 1px;
+
+  @media (max-width: 1850px) {
+    font-size: 0.95px;
+  }
+
+  @media (max-width: 1780px) {
+    font-size: 0.9px;
+  }
+
+  @media (max-width: 1680px) {
+    font-size: 0.85px;
+  }
+
+  @media (max-width: 1580px) {
+    font-size: 0.8px;
+  }
+
+  @media (max-width: 1480px) {
+    font-size: 0.75px;
+  }
+
+  @media (max-width: 1380px) {
+    font-size: 0.7px;
+  }
+
+  @media (max-width: 1330px) {
+    font-size: 0.65px;
+  }
+
+  @media (max-width: 1240px) {
+    font-size: 0.6px;
+  }
+
+  @media (max-width: 1140px) {
+    font-size: 0.55px;
+  }
+
+  @media (max-width: 1030px) {
+    font-size: 0.5px;
+  }
+
+  @media (max-width: 930px) {
+    font-size: 0.45px;
+  }
+
+  @media (max-width: 850px) {
+    font-size: 1px;
+  }
+}
+
+body {
+  font-family: $font-Onest;
+  font-style: normal;
+  font-display: swap;
+}
+
+input, textarea {
+  outline: none;
+  border: 0;
+  background: transparent;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  background: transparent;
+  outline: 0;
+}
+
+address {
+  font-style: normal;
+}
+
+.wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+ul, ol, dl {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  max-width: calc(1200rem + 30rem);
+  margin: 0 auto;
+  padding: 0 15rem;
+}
+
+.section_title {
+  font-weight: 900;
+  font-size: 45rem;
+  line-height: 140%;
+  text-align: center;
+  color: $color-black;
+  text-transform: uppercase;
+
+  @include media('md') {
+    font-size: 26rem;
+  }
+}
+
+.section-top {
+  margin-top: 80rem;
+
+  @include media('md') {
+    margin-top: 40rem;
+  }
+}
+
+.green_btn {
+  font-family: $font-Manrope;
+  font-weight: 800;
+  font-size: 16rem;
+  line-height: 174%;
+  text-align: center;
+  color: $color-white;
+  border-radius: 15rem;
+  height: 55rem;
+  text-transform: uppercase;
+  padding: 10rem 30rem;
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+  background: $color-red;
+
+  &:hover {
+    box-shadow: 0 6rem 20rem rgba($color-red, 0.45);
+    transform: translateY(-2rem);
+  }
+}
+
+
+.form_modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, .3);
+  backdrop-filter: blur(4rem);
+  z-index: 6;
+  display: none;
+  align-items: center;
+  justify-content: center;
+
+  &.active {
+    display: flex;
+  }
+
+  &_close {
+    position: absolute;
+    top: 20rem;
+    right: 20rem;
+  }
+
+  &_in {
+    border-radius: 30rem;
+    border: 3rem solid $color-green;
+    background: $color-white;
+    padding: 40rem;
+    width: 520rem;
+    display: flex;
+    flex-direction: column;
+    gap: 16rem;
+
+    @include media('xl') {
+      width: 100%;
+    }
+
+    @include media('md') {
+      padding: 24rem;
+      border-radius: 20rem;
+    }
+
+    img {
+      width: 230rem;
+      margin: auto;
+
+      @include media('md') {
+        width: 160rem;
+      }
+    }
+
+    h2 {
+      text-align: center;
+      font-weight: 700;
+      font-size: 20rem;
+      line-height: 130%;
+      color: $color-green;
+
+      @include media('md') {
+        font-size: 18rem;
+      }
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 24rem;
+
+      @include media('md') {
+        gap: 16rem;
+      }
+    }
+
+    .input_block {
+      display: flex;
+      flex-direction: column;
+      gap: 24rem;
+
+      @include media('md') {
+        gap: 16rem;
+      }
+    }
+
+    input {
+      height: 50rem;
+      border: 1rem solid $color-black;
+      background: $color-white;
+      border-radius: 10rem;
+      padding: 15rem 22rem;
+      font-weight: 700;
+      font-size: 14rem;
+      line-height: 100%;
+      color: #808080;
+      border: 2rem solid $color-green;
+    }
+
+    .form-tel {
+      border: 2rem solid $color-green;
+    }
+
+    button {
+      display: block;
+      height: 55rem;
+      border-radius: 10rem;
+      font-weight: 700;
+      font-size: 18rem;
+      line-height: 100%;
+      text-align: center;
+      color: $color-white;
+      background: $color-green;
+
+      @include media('md') {
+        height: 50rem;
+        font-size: 16rem;
+      }
+    }
+  }
+}

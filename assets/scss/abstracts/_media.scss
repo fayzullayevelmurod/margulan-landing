@@ -1,0 +1,23 @@
+@mixin media($breakpoint) {
+  $breakpoints: (
+    "xs": 480px,
+    "sm": 640px,
+    "md": 850px,
+    "lg": 1024px,
+    "xl": 1280px,
+    "2xl": 1536px
+  );
+
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (max-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  } @else {
+    @warn "Invalid breakpoint: `#{$breakpoint}`. Use one of the following: #{map-keys($breakpoints)}.";
+  }
+}
+
+// режим работы
+// @include media("lg") {
+//   padding: 10px;
+// }

@@ -1,0 +1,139 @@
+// contact
+.contact {
+  padding: 44rem 0;
+  overflow: hidden;
+  position: relative;
+
+  @include media('md') {
+    padding: 55rem 0;
+  }
+
+  .container {
+    position: relative;
+
+    @include media('md') {
+      padding: 0 30rem;
+      position: static;
+    }
+  }
+
+  &_img {
+    position: absolute;
+    transform: rotate(72deg);
+    width: 580rem;
+
+    @include media('md') {
+      width: 300rem;
+    }
+  }
+
+  .one {
+    left: -25%;
+    top: -120rem;
+
+    @include media('md') {
+      bottom: -136rem;
+      top: auto;
+      left: -80rem;
+    }
+  }
+
+  .two {
+    right: -13%;
+    top: -120rem;
+
+    @include media('md') {
+      right: 0;
+
+    }
+  }
+
+  &_in {
+    border-radius: 16rem;
+    background: $color-white;
+    padding: 40rem 70rem;
+    box-shadow: 0px 0px 10px 0px #AFAFAF;
+    max-width: 750rem;
+    margin: auto;
+    position: relative;
+    z-index: 2;
+
+    @include media('md') {
+      padding: 10rem;
+    }
+  }
+
+  .section_title {
+    margin-bottom: 24rem;
+
+    @include media('md') {
+      margin-bottom: 12rem;
+    }
+
+    span {
+      display: inline;
+    }
+
+    .yellow {
+      color: $color-yellow;
+    }
+
+    .red {
+      color: $color-red;
+    }
+  }
+
+  form {
+
+    .form_in {
+      display: flex;
+      gap: 20rem;
+      flex-direction: column;
+    }
+
+    input {
+      width: 100%;
+      border: 1rem solid $color-black;
+      border-radius: 10rem;
+      padding: 10rem 20rem;
+      font-weight: 400;
+      font-size: 16rem;
+      color: $color-black;
+      height: 55rem;
+
+      @include media('md') {
+        font-size: 14rem;
+      }
+    }
+
+    .green_btn {
+      padding: 10rem 20rem;
+      width: 100%;
+      flex-shrink: 0;
+      height: 55rem;
+      border-radius: 12rem;
+
+      @include media('md') {
+        width: 100%;
+      }
+    }
+
+    .custom-checkbox {
+      display: flex;
+      align-items: center;
+      gap: 12rem;
+      cursor: pointer;
+      margin-top: 24rem;
+
+      @include media('md') {
+        gap: 8rem;
+        margin-top: 12rem;
+      }
+
+      input {
+        display: none;
+      }
+    }
+  }
+}
+// contact

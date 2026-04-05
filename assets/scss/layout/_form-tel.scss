@@ -1,0 +1,133 @@
+.form-tel {
+    position: relative;
+    display: flex;
+    align-items: center;
+    border: 1rem solid $color-black;
+    border-radius: 10rem;
+    height: 55rem;
+    width: 100%;
+
+    &__btn {
+        display: flex;
+        align-items: center;
+        background: transparent !important;
+        font-weight: 700;
+        font-size: 16rem;
+        line-height: 100%;
+        color: $color-black;
+        flex-shrink: 0;
+        padding: 0 5rem 0 22rem;
+        cursor: pointer;
+        user-select: none;
+        position: relative;
+        z-index: 1;
+
+        @include media('md') {
+            font-size: 14rem;
+        }
+
+        img {
+            width: 18rem;
+            height: 13rem;
+            flex-shrink: 0;
+            object-fit: cover;
+            box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
+        }
+
+        svg {
+            width: 8rem;
+            height: 7rem;
+            flex-shrink: 0;
+            margin: 0 10rem 0 6rem;
+
+            @include media('md') {
+                margin: 0 6rem;
+            }
+        }
+
+        span {
+            flex-shrink: 0;
+        }
+    }
+
+    input {
+        background: transparent !important;
+        border: 0 !important;
+        height: 100% !important;
+        width: 100%;
+        padding: 0 !important;
+
+        @include media('md') {
+            font-size: 12rem !important;
+        }
+
+    }
+
+    &__list {
+        max-height: 200rem;
+        overflow-y: scroll;
+        padding: 5rem 0;
+        border: 1rem solid #7196E4;
+        border-radius: 10rem;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        &-wrap {
+            position: absolute;
+            bottom: -10rem;
+            left: 0;
+            width: 100%;
+            transform: translateY(100%);
+            background: white;
+            z-index: 5;
+            display: none;
+        }
+
+        li {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            gap: 10rem;
+            padding: 5rem 10rem;
+            cursor: pointer;
+            user-select: none;
+
+            &:hover {
+                background: rgb(227, 227, 227);
+            }
+
+            div {
+                width: 100%;
+                font-size: 14rem;
+                color: black;
+                font-weight: 500;
+            }
+
+            span {
+                display: flex;
+                flex-direction: row-reverse;
+                flex-shrink: 0;
+                font-size: 14rem;
+                line-height: 100%;
+                gap: 6rem;
+                color: black;
+            }
+
+            img {
+                width: 18rem;
+                height: 13rem;
+                object-fit: cover;
+                box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
+                flex-shrink: 0;
+            }
+        }
+    }
+
+    &.active {
+        .form-tel__list-wrap {
+            display: block;
+        }
+    }
+}
