@@ -1,18 +1,3 @@
-// form_modal
-const formBtns = document.querySelectorAll(".form_btn");
-const formModal = document.querySelector(".form_modal");
-const closeBtn = document.querySelector(".form_modal_close");
-
-formBtns.forEach((btn) => {
-  btn.addEventListener("click", () => {
-    formModal.classList.add("active");
-  });
-});
-
-closeBtn.addEventListener("click", () => {
-  formModal.classList.remove("active");
-});
-// form_modal
 
 // form
 document.querySelectorAll("form").forEach((form) => {

@@ -136,6 +136,10 @@ p, h1, h2, h3, h4, h5, h6 {
   @include media('md') {
     font-size: 26rem;
   }
+
+  @include media('xs') {
+    font-size: 24rem;
+  }
 }
 
 .section-box {
@@ -163,125 +167,5 @@ p, h1, h2, h3, h4, h5, h6 {
   &:hover {
     box-shadow: 0 6rem 20rem rgba($color-red, 0.45);
     transform: translateY(-2rem);
-  }
-}
-
-
-.form_modal {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(255, 255, 255, .3);
-  backdrop-filter: blur(4rem);
-  z-index: 6;
-  display: none;
-  align-items: center;
-  justify-content: center;
-
-  &.active {
-    display: flex;
-  }
-
-  &_close {
-    position: absolute;
-    top: 20rem;
-    right: 20rem;
-  }
-
-  &_in {
-    border-radius: 30rem;
-    border: 3rem solid $color-green;
-    background: $color-white;
-    padding: 40rem;
-    width: 520rem;
-    display: flex;
-    flex-direction: column;
-    gap: 16rem;
-
-    @include media('xl') {
-      width: 100%;
-    }
-
-    @include media('md') {
-      padding: 24rem;
-      border-radius: 20rem;
-    }
-
-    img {
-      width: 230rem;
-      margin: auto;
-
-      @include media('md') {
-        width: 160rem;
-      }
-    }
-
-    h2 {
-      text-align: center;
-      font-weight: 700;
-      font-size: 20rem;
-      line-height: 130%;
-      color: $color-green;
-
-      @include media('md') {
-        font-size: 18rem;
-      }
-    }
-
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 24rem;
-
-      @include media('md') {
-        gap: 16rem;
-      }
-    }
-
-    .input_block {
-      display: flex;
-      flex-direction: column;
-      gap: 24rem;
-
-      @include media('md') {
-        gap: 16rem;
-      }
-    }
-
-    input {
-      height: 50rem;
-      border: 1rem solid $color-black;
-      background: $color-white;
-      border-radius: 10rem;
-      padding: 15rem 22rem;
-      font-weight: 700;
-      font-size: 14rem;
-      line-height: 100%;
-      color: #808080;
-      border: 2rem solid $color-green;
-    }
-
-    .form-tel {
-      border: 2rem solid $color-green;
-    }
-
-    button {
-      display: block;
-      height: 55rem;
-      border-radius: 10rem;
-      font-weight: 700;
-      font-size: 18rem;
-      line-height: 100%;
-      text-align: center;
-      color: $color-white;
-      background: $color-green;
-
-      @include media('md') {
-        height: 50rem;
-        font-size: 16rem;
-      }
-    }
   }
 }
